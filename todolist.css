@@ -1,0 +1,343 @@
+@property --fill {
+    syntax: '<length>';
+    inherits: true;
+    initial-value: 0vw;
+}
+@property --fill2 {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 33.34%;
+}
+@property --fill3 {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 66.67%;
+}
+@property --fill1 {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+}
+
+body {
+    background-color: rgb(23, 23, 23); /* Black Panther black */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    color: #F0F0F0; /* Primary text color */
+}
+
+.container {
+    position: absolute;
+    width: 80vw;
+    min-width: 330px;
+    background-color: transparent;
+    margin-top: 20px;
+    left: 50%;
+    transform:translate(-50%,0%);
+    
+}
+
+  
+.details {
+    width: 100%;
+    height: 13.33vw;
+    min-height: 73.5px;
+    border-radius: 1.5vw;
+    display: grid;
+    grid-template-columns: 1fr 22.22%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "boxtitle boxball"
+        "boxbar boxball";
+    overflow: hidden;
+    background-color: #3D0075; /* Royal purple */
+}
+
+.fraction {
+    background-color: #C5B4E3; /* Vibranium glow */
+    border-radius: 50%;
+    scale: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vw;
+    color: #0D0D0D; 
+}
+
+.progressbar {
+    background-color: #4E4E4E;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "boxcheckall boxreset boxdeletecheck";
+}
+
+.title {
+    font-size: 3vw;
+    font-family: Orbitron;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #4E4E4E; /* Steel gray */
+    color: #F0F0F0; /* Text color */
+}
+
+.tag {
+    font-size: 1.5vw;
+    font-weight: bolder;
+    background:linear-gradient(to right,rgb(24, 0, 41), #3D0075 , rgb(24, 0, 41) ); /* Purple */
+    color: #C5B4E3; /* Light purple text */
+}
+
+.tasktaker {
+    width: 98%;
+    height: 3.75vw;
+    min-height: 27.5625px;
+    border-radius: 0.5vw;
+    margin: 0.5vw auto;
+    display: grid;
+    grid-template-columns: 1fr minmax(27.5px, 3.75vw);
+    grid-template-areas: "boxtype boxsubmit";
+    font-size: 1.5vw;
+    font-family: sans-serif;
+    background-color: #1E1E1E; /* Very dark gray */
+    color: #F0F0F0;
+}
+
+.submit {
+    background-color: #3D0075; /* Purple */
+    border-radius: 50%;
+    scale: 0.9;
+    font-size: inherit;
+    font-weight: 900;
+    color: #f4f4f4;
+}
+
+.typing_task {
+    background-color: #2A2A2A; /* Dark gray */
+    border-radius: 1000px;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 900;
+    padding-left: 1vw;
+    border-style: solid;
+    margin-right: 0.7vw;
+    margin-top: 6px;
+    color: #C5B4E3; /* Light purple text */
+    border-color: #4E4E4E; /* Steel gray border */
+}
+.typing_task:focus{
+    outline-style: solid;
+    outline-color: #ba5cec;
+    outline-width: 0.3vw;       /* You also need to set a width */
+    background:linear-gradient(to right, rgb(24, 0, 41), #3D0075 , rgb(24, 0, 41) );
+}
+
+.tasks_list {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+
+.task_line {
+    background:linear-gradient(to right, rgb(24, 0, 41), #3D0075 , rgb(24, 0, 41) ); /* Purple */
+    border-radius: 1000px;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 900;
+    padding-left: 1vw;
+    border-style: solid;
+    margin-right: 1.5vw;
+    align-self: center;
+    padding: 5px 25px;
+    color: #C5B4E3;
+    border-color: #C5B4E3; /* Light purple border */
+    margin-left: 1vw;
+    word-wrap: break-word;
+    border-width: 0.25vw;
+
+    
+}
+.task_line_edit {
+    background:linear-gradient(to right, rgb(24, 0, 41), #3D0075 , rgb(24, 0, 41) ); /* Purple */
+    border-radius: 1000px;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 900;
+    padding-left: 20px;
+    border-style: solid;
+    margin-right: 1.5vw;
+    align-self: center;
+    padding: 5px 0px;
+    padding-left: 20px;
+    color: #C5B4E3;
+    border-color: #C5B4E3; /* Light purple border */
+    margin-left: 1vw;
+    word-wrap: break-word;
+    border-width: 0.25vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    grid-template-areas: "boxinput boxsubmit";
+}
+.task_line:hover{
+    cursor: pointer;
+}
+.task_stored {
+    width: 98%;
+    min-height: 27.5625px;
+    border-radius: 0.5vw;
+    margin: 0.8vw auto;
+    display: grid;
+    grid-template-columns:minmax(27.5625px, 3.75vw) minmax(0,1fr) minmax(27.5625px, 3.75vw);
+    grid-template-areas: "boxdust boxline boxcheck";
+    font-size: 2vw;
+    font-family: sans-serif;
+    background:transparent; /* Dark background */
+    color: #F0F0F0;
+    align-items: center;
+}
+.tick {
+    scale: 1.2;
+    font-size: inherit;
+    /* max-height: 4.2vw; */
+    font-weight: 900;
+    margin: 0;
+    background: conic-gradient(
+        #C5B4E3 0% var(--fill1), 
+        transparent var(--fill1) 33.34%, 
+        #C5B4E3 33.34% var(--fill2), 
+        transparent var(--fill2) 66.67%, 
+        #C5B4E3 66.67% var(--fill3), 
+        transparent var(--fill3) 100.1%
+    );
+    aspect-ratio:1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0px 0px  var(--fill) #ba5cec; /* Vibranium glow */
+    transition: --fill1 0.6s ease-in-out 0.2s, --fill2 0.6s ease-in-out 0.2s, --fill3 0.6s ease-in-out 0.2s, --fill 2s;
+    color: #F0F0F0;
+}
+
+.small_bro {
+    height: 60%;
+    width: 60%;
+    background-color: #0D0D0D; /* Black Panther black */
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    position: absolute;
+    color: rgb(142, 142, 142);/* Light purple */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.delete {
+    background: linear-gradient(to top , #3D0075 , transparent); 
+    scale: 1.2;
+    font-size: inherit;
+    aspect-ratio:1/1;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.2vw;
+    border-color: black;
+}
+.delete:hover{
+    background:linear-gradient(to bottom , red , transparent);
+    cursor: pointer;
+}
+.input_line{
+    background:transparent; /* Purple */
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: 900;
+    align-self: center;
+    padding: 5px 0px;
+    color: #C5B4E3;
+    outline: none;
+    border-style: none;
+}
+.submittext{
+    background-color: rgb(74, 0, 97); /* Purple */
+    height:200%;
+    font-size: inherit;
+    font-weight: 900;
+    border-style: none;
+    align-self: center;
+    color: #C5B4E3;
+    text-align: center;
+    border-top-right-radius:200px;
+    border-bottom-right-radius:200px;
+}
+.reset,
+.deletecheck,
+.checkall{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-style: solid;
+    border-color:#3D0075;
+    border-width: 0.5vw;
+    border-right-width:0px;
+    padding-top: 3px;
+    font-size: 1.2vw;
+}
+.reset,
+.deletecheck,.tick,.submittext,
+.checkall:hover{
+    cursor: pointer;
+}
+.checkall{
+    border-bottom-left-radius: 1.5vw;
+    
+}
+
+  @media(max-width: 740px) {
+    .title {
+        font-size: 22.2px;
+    }
+    .fraction {
+        font-size: 22.2px;
+    }
+    .tag {
+        font-size: 11.1px;
+    }
+    .tasktaker {
+        font-size: 11.1px;
+    }
+    .tick{
+        font-size: 15px;
+    }
+    .delete{
+        font-size: 13px;
+    }
+    .task_line{
+        font-size: 15px;
+    }
+    .task_stored{
+        margin: 6px auto;
+    }
+    .input_line{
+        font-size: 15px;
+    }
+    .submittext{
+        font-size: 15px;
+    }
+    .reset span,
+    .deletecheck span,
+    .checkall span{
+      font-size: 9px;
+    }
+}
+
