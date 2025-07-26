@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todolist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="container">
+        <div class="details">
+            <div class="title" style="grid-area: boxtitle">
+                <spam>To-Do-List</spam>
+                <spam class="tag">Stay organized. Get things done.</spam>
+            </div>
+            <div class="fraction" style="grid-area: boxball">0/0</div>
+            <div class="progressbar" style="grid-area: boxbar">
+                <div class="reset" style="grid-area: boxreset"><span><i class="fa-solid fa-trash"></i> All<br>Tasks</span></div>
+                <div class="deletecheck" style="grid-area: boxdeletecheck"><span><i class="fa-solid fa-trash"></i> Completed<br>Tasks</span></div>
+                <div class="checkall" style="grid-area: boxcheckall"><span>All Tasks<br>Done</span></div>
+            </div>
+        </div>
+        <form class="tasktaker">
+            <input type="text" name="mainform" class="typing_task" autocomplete="off" style="grid-area: boxtype" placeholder="Add Task" required>
+            <button type="submit" class="submit" style="grid-area: boxsubmit"><i class="fa-solid fa-plus"></i></button>
+        </form>
+        <hr class="line">
+        <div class="tasks_list">
+            
+        </div>
+    </div>
+    <script src="todolist.js"></script>
+</body>
+</html>
